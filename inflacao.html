@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cálculo de Inflação</title>
+</head>
+
+<body>
+    <script>
+        function mostrarNaTela(mensagem) {
+            document.write(mensagem);
+        }
+
+        function pulaLinha() {
+
+            document.write("<br>");
+            document.write("<br>");
+
+        }
+
+        function calcInflacao(valorInicial, valorFinal) {
+            return (valorFinal - valorInicial) / valorInicial * 100;
+
+        }
+
+        function calcMediaInflacao(media1, media2, media3) {
+            return (media1 + media2 + media3) / 3;
+
+        }
+
+        function calcEstimativaDiaria(valorInicial, valorFinal) {
+            return (valorFinal - valorInicial) / 6;
+        }
+
+
+        var precoTomate1 = 3.30
+        var precoTomate2 = 4.70
+        var precoArroz1 = 2.99
+        var precoArroz2 = 3.25
+        var precoCenoura1 = 3.99
+        var precoCenoura2 = 4.14
+
+        //método .toFixed() arredonda o número para cima, isto é, se temos, por exemplo 11.123, o valor fica 11.12, já se temos 20.555, o valor fica 20.56.-Outro ponto importante de se observar é que seu retorno será uma string representando o número.
+
+        var inflacaoTomate = calcInflacao(precoTomate1, precoTomate2).toFixed(2);
+        var inflacaoArroz = calcInflacao(precoArroz1, precoArroz2).toFixed(2);
+        var inflacaoCenoura = calcInflacao(precoCenoura1, precoCenoura2).toFixed(2);
+        var estimativaTomate = calcEstimativaDiaria(precoTomate1, precoTomate2);
+        var estimativaArroz = calcEstimativaDiaria(precoArroz1, precoArroz2);
+        var estimativaCenoura = calcEstimativaDiaria(precoCenoura1, precoCenoura2);
+
+
+        mostrarNaTela(inflacaoTomate + "% - Inflação do Tomate <br><br>"+ inflacaoArroz + "% - Inflação do Arroz <br><br>" + inflacaoCenoura + "% - Inflação da Cenoura<br><br>");
+        
+        
+        // como utilizamos o .tofixed o numero retornou uma string tivemos que usar o parsefloat para converter string em um valor de número com ponto flutuante.
+        
+        mostrarNaTela(calcMediaInflacao(parseFloat(inflacaoTomate), parseFloat(inflacaoArroz), parseFloat(inflacaoCenoura)) .toFixed(2) + "% - Média geral de inflação<br><br>");         
+    
+
+
+        //toLocaleString() que converte um número para uma string, já tratando a questão do arredondamento e convertendo para a moeda do país que queremos
+        mostrarNaTela(estimativaTomate.toLocaleString('pt-BR', {style: 'currency',currency: 'BRL'}) + " Estimativa diaria do Tomate")         
+        pulaLinha();
+
+
+        mostrarNaTela(estimativaArroz.toLocaleString('pt-BR', {style: 'currency',currency: 'BRL'}) + " - Estimativa diaria do Arroz")
+        pulaLinha();
+
+
+        mostrarNaTela(estimativaCenoura.toLocaleString('pt-BR', {style: 'currency',currency: 'BRL'}) + " - Estimativa diaria da Cenoura <br>");
+
+    </script>
+</body>
+
+</html>
