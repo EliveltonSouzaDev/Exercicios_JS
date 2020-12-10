@@ -1,2 +1,2 @@
-# Exercicios_js
- exercicios de javascript durante as aulas e atividades da  Resilia Educação
+# Exercícios_js
+ Exercícios de Javascript durante as aulas e atividades da  Resilia Educação.
