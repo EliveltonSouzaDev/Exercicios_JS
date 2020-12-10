@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dobro e metade</title>
+</head>
+
+<body>
+    <script>
+        function pulaLinha() {
+
+            document.write("<br>"); // pula uma linha no documento
+        }
+
+        function saudacao() {
+            document.write("Olá, " + nome +
+            " Tudo Bem?"); // função para incluir o nome que o usuario utilizar no prompt.
+            pulaLinha();
+        }
+
+        function dobro(numero) { // função para multiplica o numero que o usuario colocar no prompt.
+            return numero * 2;
+        }
+
+        function metade(numero) { // função para divide o numero que o usuario colocar no prompt.
+            return numero / 2;
+        }
+
+        function mostraResultado(resultado) { // guarda os resultados das operações matemáticas e mostra na tela.
+            document.write(resultado);
+            pulaLinha();
+        }
+
+        // faz abrir a janela de prompt na tela para inserir dados.
+        var nome = prompt(" informe seu nome "); 
+        var numeroMultiplicado = prompt(" informe um número para multiplicar ");
+        var numeroDividido = prompt(" informe um número para dividir ");
+
+        saudacao(); // mostra o nome digitado no prompt
+        mostraResultado(dobro(numeroMultiplicado) +
+        " esse é o resultado do número informado multiplicado por 2."); // mostra o valor que foi inserido no prompt multiplicado.
+        mostraResultado(metade(numeroDividido) +
+        " esse é o resultado do número informado multiplicado por 2."); // mostra o valor que foi inserido no prompt dividido.
+    </script>
+</body>
+
+</html>
