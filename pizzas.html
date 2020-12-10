@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizzaria Resilia</title>
+</head>
+
+<body>
+    <script>
+
+        // function criada para pular linhas no texto.
+        function pulaLinha() {
+            document.write("<br>");
+        }
+
+        // Criação de prompts para captar valores que o usuario deseja calcular
+        var pizzaPreco = prompt("Digite o preço de custo da pizza: ");
+        var pizzaValorVenda = prompt("Digite o valor de venda da pizza: ");
+        var pizzaSabor = prompt("Digite o sabor da pizza: ");
+
+        // Criação de variáveis para realizar os calculos solicitados
+        var imposto = ((pizzaValorVenda * 8.9) / 100) .toFixed(2);
+        var lucroBruto = (pizzaValorVenda - pizzaPreco).toFixed(2);
+        var lucroLiquido = (lucroBruto - imposto).toFixed(2); 
+        pulaLinha()
+
+        // Escreve na tela os resultados obtidos, através dos numeros que os usuarios colocaram no prompt.
+        document.write("Para a pizza de sabor " + pizzaSabor + ", o lucro Bruto é de R$" + lucroBruto + ", e o imposto é de R$ " + imposto + ", resultando em um lucro liquido de R$ "+ lucroLiquido + " em cima de cada pizza de " + pizzaSabor + " vendida." );
+
+    </script>
+</body>
+
+</html> 
