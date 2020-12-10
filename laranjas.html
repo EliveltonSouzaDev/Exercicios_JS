@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oranges</title>
+</head>
+
+<body>
+
+    <script>
+        // function criada para pular linhas no texto.
+        function skipLines() {
+            document.write("<br>");
+            document.write("<br>");
+        }
+
+        // Criação de prompts para captar valores que o usuario deseja calcular
+        var amountOranges = prompt("Quantas Laranjas você tem? ");
+        var amountNeighbors = prompt("Quantos vizinhos você tem? ");
+
+        // Criação de variáveis para realizar os calculos solicitados
+        var remainder = (quantOranges % quantNeighbors);
+        var division = (quantOranges / quantNeighbors) .toFixed(0);
+
+        // Escreve na tela os resultados obtidos, através dos numeros que os usuarios colocaram no prompt.
+        document.write("A sobra para Joselito é de: " + remainder + " laranja(s) ");
+        skipLines()
+        document.write("A divisão entre os vizinhos é de: " + division + " laranjas para cada.");
+
+    </script>
+
+
+</body>
+
+</html>
