@@ -1,0 +1,31 @@
+<meta charset="UTF-8">
+
+<script>
+	function pulaLinha() {
+
+		document.write("<br>");
+		document.write("<br>");
+	}
+
+	function mostra(frase) {
+
+		document.write(frase);
+		pulaLinha();
+	}
+
+	var numeroPar = 30;
+
+
+	while (numeroPar <= 40) {
+
+		if (numeroPar == 33 || numeroPar == 37) {
+			numeroPar = numeroPar + 1;
+		}
+
+		mostra(numeroPar);
+		numeroPar = numeroPar + 1;
+
+	}
+
+	mostra('FIM')
+</script>
