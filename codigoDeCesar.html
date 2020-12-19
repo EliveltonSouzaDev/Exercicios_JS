@@ -1,0 +1,15 @@
+
+<script>
+    function cifraDeCesar(deslocamento,mensagem) {
+
+        var indices = [];
+        var mensagemAlterada = "";
+
+        for (var i = 0; i < mensagem.length; i++){
+            indices.push((mensagem.charCodeAt(i) + deslocamento)%126);
+            mensagemAlterada += String.fromCharCode(indices[i]);
+        }
+
+        return mensagemAlterada;
+    }
+</script>
